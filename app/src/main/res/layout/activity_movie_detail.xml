@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/ivBackground"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_300_dp"
+        android:scaleType="fitXY" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient"
+        android:rotation="180" />
+
+    <RelativeLayout
+        android:id="@+id/lyt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_20_dp"
+        android:layout_marginTop="@dimen/dimen_130_dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_10_dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_18_sp"
+            android:textStyle="bold"
+            tools:text="Title" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="120dp"
+            android:layout_height="155dp"
+            android:layout_below="@id/tvTitle"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/ic_launcher_background" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTitle"
+            android:layout_marginStart="@dimen/dimen_10_dp"
+            android:layout_toRightOf="@id/imageView"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTagLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size_16_sp"
+                android:textStyle="bold"
+                tools:text="tagline" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10_dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size_16_sp"
+                android:textStyle="normal"
+                tools:text="rating" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10_dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size_16_sp"
+                android:textStyle="normal"
+                tools:text="status" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvBudget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10_dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size_14_sp"
+                android:textStyle="bold"
+                tools:text="budget" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvRevenue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10_dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size_14_sp"
+                android:textStyle="bold"
+                tools:text="revenue" />
+
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvGenere"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView"
+            android:layout_marginTop="@dimen/dimen_10_dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_16_sp"
+            android:textStyle="normal" />
+
+    </RelativeLayout>
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/lyt"
+        android:layout_marginTop="@dimen/dimen_15_dp"
+        android:background="@color/colorPrimary" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view"
+        android:padding="@dimen/dimen_10_dp"
+        android:text="@string/overview"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/text_size_16_sp"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvOverview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text"
+        android:justificationMode="inter_word"
+        android:padding="@dimen/dimen_10_dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/text_size_16_sp"
+        android:textStyle="normal"
+        tools:text="Overview" />
+
+</RelativeLayout>

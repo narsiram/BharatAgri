@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="@dimen/dimen_130_dp"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20dp"
+    android:background="@color/colorAccent"
+    android:orientation="vertical"
+    android:padding="@dimen/dimen_10_dp">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="120dp"
+        android:layout_height="155dp"
+        android:scaleType="centerCrop"
+        tools:src="@drawable/ic_launcher_background" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_30_dp"
+        android:background="@drawable/gradient" />
+
+    <TextView
+        android:id="@+id/tvRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:drawablePadding="@dimen/dimen_5_dp"
+        android:gravity="end|center_vertical"
+        android:padding="@dimen/dimen_10_dp"
+        tools:text="4.5"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        app:drawableRightCompat="@drawable/rating_like" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView"
+        android:layout_marginTop="@dimen/dimen_10_dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="@dimen/text_size_16_sp"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        tools:text="title" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtName"
+        android:layout_marginTop="@dimen/dimen_5_dp"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="normal"
+        android:textSize="@dimen/text_size_14_sp"
+        tools:text="date" />
+
+
+</RelativeLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/dimen_10_dp">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/title_home"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size_16_sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_20_dp"
+        android:text="@string/sortby"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/text_size_16_sp"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_10_dp"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <RadioButton
+            android:id="@+id/rbRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/colorPrimary"
+            android:padding="@dimen/dimen_2_dp"
+            android:text="@string/rating_sort"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_14_sp" />
+
+        <RadioButton
+            android:id="@+id/rbPopularity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/colorPrimary"
+            android:padding="@dimen/dimen_2_dp"
+            android:text="@string/popularity_sort"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_14_sp" />
+
+        <RadioButton
+            android:id="@+id/rbReleaseDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/colorPrimary"
+            android:padding="@dimen/dimen_2_dp"
+            android:text="@string/release_status_sort"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_14_sp" />
+    </RadioGroup>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingTop="@dimen/dimen_10_dp" />
+
+</LinearLayout>
+
+
